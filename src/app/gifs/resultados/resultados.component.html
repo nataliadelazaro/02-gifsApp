@@ -1,4 +1,19 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a faucibus augue. Ut sit amet felis in ex luctus
-interdum. Aenean commodo lectus et molestie pellentesque. Maecenas porttitor sed purus sed feugiat. Vivamus nisi
-est, facilisis eu tempor sed, convallis ac nisl. Nunc placerat non arcu quis molestie. Curabitur nisl dui,
-venenatis non pharetra id, mollis vitae est.
+<!--
+    <ul>
+    <li *ngFor="let gif of resultados">
+        {{ gif.title }}
+    </li>
+</ul>
+-->
+<div class="row">
+    <div class="col-md-4 col-sm-6" *ngFor="let gif of resultados">
+        <div class="card">
+            <img [src]= "gif.images.downsized_medium.url" [alt] = "gif.title" class="card-image-top">
+            <div class="card-body">
+                <div class="card-text">
+                    {{gif.title}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
